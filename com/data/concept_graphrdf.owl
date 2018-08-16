@@ -1,0 +1,1044 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY untitled-ontology-3 "http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3"
+     xml:base="http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3"
+     xmlns:untitled-ontology-3="http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#has -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;has">
+        <rdfs:range rdf:resource="&untitled-ontology-3;偿债能力"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;成长情况"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;时序类"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;盈利能力"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;股本情况"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;营运情况"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;非经常性损益"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#上司 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;上司">
+        <owl:inverseOf rdf:resource="&untitled-ontology-3;下属"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;职场关系"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#下属 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;下属">
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;职场关系"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#业务代办 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;业务代办">
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#业务外包 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;业务外包">
+        <rdfs:range rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;合作"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#业务竞争 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;业务竞争">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;竞争"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#主办券商 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;主办券商">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;合作"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#亲戚 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;亲戚"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#会计师事务所 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;会计师事务所">
+        <rdfs:range rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;合作"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#供应商 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;供应商">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;合作"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#债主 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;债主">
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;债务"/>
+        <owl:inverseOf rdf:resource="&untitled-ontology-3;债户"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#债务 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;债务">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#债户 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;债户">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;债务"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#兄弟 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;兄弟">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;家人"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#分支 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;分支">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;公司"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#办公地址 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;办公地址">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;地点"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#叔侄 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;叔侄">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;亲戚"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#合作 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;合作">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#同事 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;同事">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;职场关系"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#夫妻 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;夫妻">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;家人"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#姐妹 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;姐妹">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;家人"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#客户 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;客户">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;合作"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#家人 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;家人">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#工程师 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;工程师">
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;高管"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#总工程师 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;总工程师">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;高管"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#总监 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;总监">
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;高管"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#总经理 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;总经理">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;高管"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#战略联盟 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;战略联盟">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;合作"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#控股 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;控股">
+        <rdfs:range rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#朋友 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;朋友">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#母女 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;母女">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;家人"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#母子 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;母子">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;家人"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#法人 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;法人">
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#注册地址 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;注册地址">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;地点"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#父女 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;父女">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;家人"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#父子 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;父子">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;家人"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#监事 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;监事">
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;高管"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#监事会主席 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;监事会主席">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;高管"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#竞争 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;竞争">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;公司"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#签字注册会计师 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;签字注册会计师">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;业务代办"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#经理 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;经理">
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;高管"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#老板 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;老板">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;职场关系"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#职场关系 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;职场关系">
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;人"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#股东 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;股东">
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#舅甥 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;舅甥">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;亲戚"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#董事 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;董事">
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;高管"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#董事会秘书 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;董事会秘书">
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;高管"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#董事长 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;董事长">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;高管"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#财务总监 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;财务总监">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;高管"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#资源竞争 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;资源竞争">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:range rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;竞争"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#郎舅 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;郎舅">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;亲戚"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#高管 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-3;高管">
+        <rdfs:range rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="&owl;topObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;办公地址"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#公司全称 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;公司全称">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#其他营业外收入和支出 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;其他营业外收入和支出">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;非经常性损益"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#净利润增长率 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;净利润增长率">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;成长情况"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#出生年月 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;出生年月">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#利息保障倍数 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;利息保障倍数">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;偿债能力"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#办公地址 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;办公地址">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#加权平均净资产收益率：依据归属于挂牌公司股东的净利润计算 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;加权平均净资产收益率：依据归属于挂牌公司股东的净利润计算">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;盈利能力"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#加权平均净资产收益率：归属于挂牌公司股东的扣除非经常性损益后的净利润计算 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;加权平均净资产收益率：归属于挂牌公司股东的扣除非经常性损益后的净利润计算">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;盈利能力"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#国籍 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;国籍">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#基本每股收益 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;基本每股收益">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;盈利能力"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#姓名 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;姓名">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#存货周转率 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;存货周转率">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;营运情况"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#学历 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;学历">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#少数股东权益影响额（税后） -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;少数股东权益影响额（税后）">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;非经常性损益"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#应收账款周转率 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;应收账款周转率">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;营运情况"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#归属于挂牌公司股东的净利润 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;归属于挂牌公司股东的净利润">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;盈利能力"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#归属于挂牌公司股东的净资产 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;归属于挂牌公司股东的净资产">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;偿债能力"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#归属于挂牌公司股东的扣除非经常性损益后的净利润 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;归属于挂牌公司股东的扣除非经常性损益后的净利润">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;盈利能力"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#归属于挂牌公司股东的每股净资产 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;归属于挂牌公司股东的每股净资产">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;偿债能力"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#性别 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;性别">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;人"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#总资产增长率 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;总资产增长率">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;成长情况"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#所得税影响数 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;所得税影响数">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;非经常性损益"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#无限售股份数量 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;无限售股份数量">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;股票数量"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#时间 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;时间">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;偿债能力"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;成长情况"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;盈利能力"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;股本情况"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;股票数量"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;营运情况"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-3;非经常性损益"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#普通股总股本 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;普通股总股本">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;股本情况"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#毛利率 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;毛利率">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;盈利能力"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#流动比率 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;流动比率">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;偿债能力"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#经营活动产生的现金流量净额 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;经营活动产生的现金流量净额">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;营运情况"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#股票总数 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;股票总数">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;股票数量"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#营业收入 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;营业收入">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;盈利能力"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#营业收入增长率 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;营业收入增长率">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;成长情况"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#计入当期损益的政府补助 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;计入当期损益的政府补助">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;非经常性损益"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#计入权益的优先股数量 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;计入权益的优先股数量">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;股本情况"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#计入负债的优先股数量 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;计入负债的优先股数量">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;股本情况"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#证券代码 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;证券代码">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#证券简称 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;证券简称">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;公司"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#负债总计 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;负债总计">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;偿债能力"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#资产总计 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;资产总计">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;偿债能力"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#资产负债率：合并 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;资产负债率：合并">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;偿债能力"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#资产负债率：母公司 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;资产负债率：母公司">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;偿债能力"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#限售股份数量 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;限售股份数量">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;股票数量"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#非经常性损益净额 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;非经常性损益净额">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;非经常性损益"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#非经常性损益合计 -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-3;非经常性损益合计">
+        <rdfs:domain rdf:resource="&untitled-ontology-3;非经常性损益"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#人 -->
+
+    <owl:Class rdf:about="&untitled-ontology-3;人">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;非时序类"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#偿债能力 -->
+
+    <owl:Class rdf:about="&untitled-ontology-3;偿债能力">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;时序类"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#公司 -->
+
+    <owl:Class rdf:about="&untitled-ontology-3;公司">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;非时序类"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#地点 -->
+
+    <owl:Class rdf:about="&untitled-ontology-3;地点">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;非时序类"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#成长情况 -->
+
+    <owl:Class rdf:about="&untitled-ontology-3;成长情况">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;时序类"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#时序类 -->
+
+    <owl:Class rdf:about="&untitled-ontology-3;时序类"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#盈利能力 -->
+
+    <owl:Class rdf:about="&untitled-ontology-3;盈利能力">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;时序类"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#股本情况 -->
+
+    <owl:Class rdf:about="&untitled-ontology-3;股本情况">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;时序类"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#股票数量 -->
+
+    <owl:Class rdf:about="&untitled-ontology-3;股票数量">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;时序类"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#营运情况 -->
+
+    <owl:Class rdf:about="&untitled-ontology-3;营运情况">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;时序类"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#非时序类 -->
+
+    <owl:Class rdf:about="&untitled-ontology-3;非时序类"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renyi/ontologies/2018/5/untitled-ontology-3#非经常性损益 -->
+
+    <owl:Class rdf:about="&untitled-ontology-3;非经常性损益">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;时序类"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
